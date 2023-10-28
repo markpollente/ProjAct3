@@ -50,11 +50,7 @@ while True:
         print("Miles:           " + str(json_data["route"]["distance"]))
         print("Kilometers:      " + str("{:.2f}".format(json_data["route"]["distance"] * 1.61)))
 
-        # Additional Enhancements
-        print("\nAdditional Features:")
-        display_colored_step_by_step(json_data)  # Step-by-step directions
-        print("2. UI Enhancement: Colored output for step-by-step directions and a table format")
-        print("3. Additional Options: Provide data in the metric system or miles")
+        display_colored_step_by_step(json_data)
         unit_choice = input("Choose unit (M for miles, K for kilometers): ").upper()
         if unit_choice == "M":
             print(f"Distance: {json_data['route']['distance']:.2f} miles")
